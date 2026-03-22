@@ -755,32 +755,14 @@ secretBtn.style.opacity="1";
 
 envelope.addEventListener("click",()=>{
 
-/* OCULTAR COMPLETAMENTE EL SOBRE */
-
-envelope.style.opacity="0";
-envelope.style.pointerEvents="none";
-
-/* PEQUEÑO RETRASO PARA ELIMINARLO */
-
-setTimeout(()=>{
-envelope.remove();
-},500);
-
-/* MOSTRAR TEXTO Y BOTÓN */
+envelope.style.display="none";
 
 letter.style.opacity="1";
-
-setTimeout(()=>{
 btn.style.opacity="1";
-},400);
-
-/* INICIAR MÚSICA */
 
 music.volume=0.4;
 
 music.play().catch(()=>{});
-
-/* ESCRIBIR TEXTO */
 
 typeText(scenes[currentScene]);
 
