@@ -753,16 +753,29 @@ secretBtn.style.opacity="1";
 
 /* SOBRE */
 
-envelope.addEventListener("click",()=>{
+ function openEnvelope() {
+    
+    let env = document.querySelector(".envelope");
+    
+    env.classList.add("open");
+    
+    setTimeout(() => {
+    
+    nextScene();
+    
+    startTyping();
+    
+    }, 900);
+    
+    }
 
-envelope.style.display="none";
-
-letter.style.opacity="1";
-btn.style.opacity="1";
+/* INICIAR MÚSICA */
 
 music.volume=0.4;
 
 music.play().catch(()=>{});
+
+/* ESCRIBIR TEXTO */
 
 typeText(scenes[currentScene]);
 
